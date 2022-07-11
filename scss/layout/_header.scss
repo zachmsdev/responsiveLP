@@ -1,0 +1,53 @@
+
+header {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > * {
+        flex-basis: 50%;
+        height: 100%;
+    }
+    & nav {
+        background: #cacaca;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 1rem;
+    }
+    & .titleBlock {
+        background-color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: $specialBlue;
+        padding-left: 1rem;
+    }
+}
+
+.burgerIcon {       // mobile menu icon
+    height: 25px;
+    width: 25px;
+    @include bringCenter();
+    flex-direction: column;
+    gap: 0.2em;
+    & > div:nth-child(1) {
+        height: 3px;
+        width: 100%;
+        border-radius: 1rem;
+        background-color: black;
+        top: 0.5rem;
+    }
+    & > div:nth-child(2) {
+        height: 3px;
+        width: 100%;
+        border-radius: 1rem;
+        background-color: black;
+    }
+    & > div:nth-child(3) {
+        height: 3px;
+        width: 100%;
+        border-radius: 1rem;
+        background-color: black;
+    }
+}

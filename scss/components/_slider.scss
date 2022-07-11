@@ -1,0 +1,23 @@
+
+// Landing Page Slider
+
+aside {
+    width: 100%;
+    height: 7rem;
+    background: lightgray;
+    & .slider {
+        height: 100%;
+        width: 100%;
+        background: green;
+        scroll-behavior: smooth;
+        list-style: none;
+        display: flex;
+        transition: transform 3s ease-in;
+    }
+    & .slide {
+        flex: 1 0 100%;
+        height: 100%;
+        width: 100%;
+        background-color: cyan;
+    }
+}

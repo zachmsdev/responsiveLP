@@ -12,7 +12,7 @@ html {
 
 body {
   min-height: 100vh;
-  padding-top: 1.5rem;
+  padding: 1.5rem 0rem;
   font-size: 16px;
   background-color: #E0E0E0;
 }
@@ -21,6 +21,10 @@ body {
   width: 90%;
   margin: 0 auto;
   background-color: yellow;
+}
+
+ul li {
+  list-style-type: none;
 }
 
 .blueButton {
@@ -55,7 +59,7 @@ header > * {
 }
 
 header nav {
-  background: #cacaca;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +69,8 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
 }
 
 header .titleBlock {
@@ -80,7 +85,8 @@ header .titleBlock {
       -ms-flex-align: center;
           align-items: center;
   color: #1d8cff;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
 }
 
 .burgerIcon {
@@ -158,6 +164,11 @@ main .sectionOne {
   font-family: "Arial";
 }
 
+main .sectionOne > h2 {
+  font-size: 2.3rem;
+  padding: 0rem 1rem;
+}
+
 main .sectionOne > p {
   font-size: 1.3rem;
   padding: 0rem 1rem;
@@ -176,33 +187,169 @@ main .sectionTwo {
   height: 50%;
 }
 
+section {
+  height: 55rem;
+  background-color: salmon;
+}
+
+section .subSectionOne {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-wrap: anywhere;
+  padding-top: 3rem;
+  gap: 1rem;
+  background: white;
+  width: 100%;
+  height: 50%;
+  font-family: "Arial";
+}
+
+section .subSectionOne ul {
+  line-height: 1.5;
+}
+
+section .subSectionOne ul li span {
+  font-weight: 700;
+}
+
+section .subSectionOne > h3 span {
+  color: #1d8cff;
+}
+
+section .subSectionOne > h3 {
+  line-height: 1;
+  margin-bottom: 0.5em;
+  padding: 0rem 0.25rem;
+  font-size: 2.1rem;
+}
+
+section .subSectionOne > p {
+  font-size: 1.3rem;
+  margin-bottom: 0.75em;
+  padding: 0rem 1.5rem;
+}
+
+section .subSectionOne > * {
+  text-align: center;
+}
+
+section .subSectionTwo {
+  background: url("../../images/secondSection.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+
+article {
+  height: 7rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article .h3Side {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 70%;
+          flex: 1 0 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Arial";
+  font-weight: 500;
+}
+
+article .h3Side > span {
+  margin-left: 0.25em;
+  color: #1d8cff;
+  font-weight: 700;
+}
+
+article .pSide {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+  display: none;
+}
+
+.project {
+  height: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project .photoSide {
+  background-color: blue;
+  -webkit-box-flex: 1.75;
+      -ms-flex: 1.75 0 auto;
+          flex: 1.75 0 auto;
+}
+
+.project .textSide {
+  background-color: firebrick;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.one .photoSide {
+  background: url("../../images/firstProject.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.two .photoSide {
+  background: url("");
+}
+
+.three .photoSide {
+  background: url("");
+}
+
 aside {
   width: 100%;
   height: 7rem;
   background: lightgray;
-}
-
-aside .slider {
-  height: 100%;
-  width: 100%;
-  background: green;
-  scroll-behavior: smooth;
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: -webkit-transform 3s ease-in;
-  transition: -webkit-transform 3s ease-in;
-  transition: transform 3s ease-in;
-  transition: transform 3s ease-in, -webkit-transform 3s ease-in;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-aside .slide {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-  height: 100%;
-  width: 100%;
-  background-color: cyan;
+aside ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+aside ul li {
+  font-family: 'Verdana';
+  font-size: 1.7rem;
+  color: gray;
+}
+
+aside ul li:nth-child(4) {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

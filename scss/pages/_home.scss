@@ -16,6 +16,10 @@ main {
         width: 100%;
         height: 50%;
         font-family: $superSpecialFont;
+        & > h2 {
+            font-size: 2.3rem;
+            padding: 0rem 1rem;
+        }
         & > p {
             font-size: 1.3rem;
             padding: 0rem 1rem;
@@ -33,4 +37,108 @@ main {
         width: 100%;
         height: 50%;
     }
+}
+
+// -------> Hero Sub-Section
+
+section {
+    height: 55rem;
+    background-color: salmon;
+    & .subSectionOne {
+        flex-direction: column;
+        overflow-wrap: anywhere;
+        padding-top: 3rem;
+        gap: 1rem;
+        background: white;
+        width: 100%;
+        height: 50%;
+        font-family: $superSpecialFont;
+        & ul {
+            line-height: 1.5;
+            & li span {
+                font-weight: 700;
+            }
+        }
+        & > h3 span {
+            color: $specialBlue;
+        }
+        & > h3 {
+            line-height: 1;
+            margin-bottom: 0.5em;
+            padding: 0rem 0.25rem;
+            font-size: 2.1rem;
+        }
+        & > p {
+            font-size: 1.3rem;
+            margin-bottom: 0.75em;
+            padding: 0rem 1.5rem;
+        }
+        & > * {
+            text-align: center;
+        }
+    }
+    & .subSectionTwo {
+        background: url('../../images/secondSection.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        // background-position: 100% 100%;
+        // background-position: center;
+        width: 100%;
+        height: 50%;
+    }
+}
+
+// -------> Projects Done Section
+
+article {
+    height: 7rem;
+    background-color: white;
+    display: flex;
+    & .h3Side {
+        flex: 1 0 70%;
+        @include bringCenter();
+        font-family: $superSpecialFont;
+        font-weight: 500;
+        & > span {
+            margin-left: 0.25em;
+            color: $specialBlue;
+            font-weight: 700;
+        }
+    }
+    & .pSide {
+        flex: 1 0 30%;
+        display: none;
+    }
+}
+
+// -------> Projects Section [DRY]
+
+.project {
+    height: 50rem;              // give project class to all 3 projects.
+    display: flex;
+    flex-direction: column;
+    & .photoSide {
+        background-color: blue;
+        flex: 1.75 0 auto;
+    }
+    & .textSide {
+        background-color: firebrick;
+        flex: 1 0 auto;
+    }
+}
+
+.one .photoSide {
+    background: url('../../images/firstProject.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: 100% 100%;
+    background-position: center;
+}
+
+.two .photoSide {
+    background: url('');
+}
+
+.three .photoSide {
+    background: url('');
 }

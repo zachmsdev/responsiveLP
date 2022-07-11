@@ -12,7 +12,7 @@ html {
 
 body {
     min-height: 100vh;
-    padding-top: 1.5rem;
+    padding: 1.5rem 0rem;
     font-size: 16px;
     background-color: $bodyColor;
 }
@@ -21,4 +21,8 @@ body {
     width: 90%;
     margin: 0 auto;
     background-color: yellow;
+}
+
+ul li {
+    list-style-type: none;
 }

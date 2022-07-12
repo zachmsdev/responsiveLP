@@ -132,7 +132,7 @@ header .titleBlock {
 
 main {
   width: 100%;
-  height: 55rem;
+  height: 54rem;
   background-color: salmon;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,18 +160,19 @@ main .sectionOne {
   gap: 1rem;
   background: white;
   width: 100%;
-  height: 50%;
+  height: 47%;
   font-family: "Arial";
 }
 
 main .sectionOne > h2 {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   padding: 0rem 1rem;
 }
 
 main .sectionOne > p {
   font-size: 1.3rem;
   padding: 0rem 1rem;
+  margin-bottom: 0.5rem;
 }
 
 main .sectionOne > * {
@@ -184,7 +185,7 @@ main .sectionTwo {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 50%;
+  height: 53%;
 }
 
 section {
@@ -300,10 +301,35 @@ article .pSide {
 }
 
 .project .textSide {
-  background-color: firebrick;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Arial";
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project .textSide > p {
+  margin-bottom: 2rem;
+}
+
+.three .textSide p {
+  font-size: 1.5rem;
 }
 
 .one .photoSide {
@@ -314,11 +340,40 @@ article .pSide {
 }
 
 .two .photoSide {
-  background: url("");
+  background: url("../../images/secondProject.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .three .photoSide {
-  background: url("");
+  background: url("../../images/thirdProject.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.testimonials {
+  background-color: lightgray;
+  height: 35rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testimonials .buttonSide {
+  background-color: firebrick;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.testimonials .textSide {
+  background-color: cyan;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5 0 auto;
+          flex: 1.5 0 auto;
 }
 
 aside {
@@ -345,7 +400,7 @@ aside ul {
 
 aside ul li {
   font-family: 'Verdana';
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: gray;
 }
 

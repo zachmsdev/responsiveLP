@@ -4,7 +4,7 @@
 
 main {
     width: 100%;
-    height: 55rem;
+    height: 54rem;
     background-color: salmon;
     display: flex;
     flex-direction: column;
@@ -14,15 +14,16 @@ main {
         gap: 1rem;
         background: white;
         width: 100%;
-        height: 50%;
+        height: 47%;
         font-family: $superSpecialFont;
         & > h2 {
-            font-size: 2.3rem;
+            font-size: 2.2rem;
             padding: 0rem 1rem;
         }
         & > p {
             font-size: 1.3rem;
             padding: 0rem 1rem;
+            margin-bottom: 0.5rem;
         }
         & > * {
             text-align: center;
@@ -35,7 +36,7 @@ main {
         // background-position: 100% 100%;
         background-position: center;
         width: 100%;
-        height: 50%;
+        height: 53%;
     }
 }
 
@@ -88,7 +89,7 @@ section {
     }
 }
 
-// -------> Projects Done Section
+// -------> Projects Intro Section
 
 article {
     height: 7rem;
@@ -122,9 +123,22 @@ article {
         flex: 1.75 0 auto;
     }
     & .textSide {
-        background-color: firebrick;
+        background-color: white;
+        padding: 1rem;
+        text-align: center;
+        font-family: $superSpecialFont;
         flex: 1 0 auto;
+        @include bringCenter();
+        gap: 0.5rem;
+        flex-direction: column;
+        & > p {
+            margin-bottom: 2rem;
+        }
     }
+}
+
+.three .textSide p {
+    font-size: 1.5rem;
 }
 
 .one .photoSide {
@@ -136,9 +150,33 @@ article {
 }
 
 .two .photoSide {
-    background: url('');
+    background: url('../../images/secondProject.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: 100% 100%;
+    background-position: center;
 }
 
 .three .photoSide {
-    background: url('');
+    background: url('../../images/thirdProject.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: 100% 100%;
+    background-position: center;
+}
+
+// -------> Testimonials Section
+
+.testimonials {
+    background-color: lightgray;
+    height: 35rem;
+    flex-direction: column;
+    & .buttonSide {
+        background-color: firebrick;
+        flex: 1 0 auto;
+    }
+    & .textSide {
+        background-color: cyan;
+        flex: 1.5 0 auto;
+    }
 }

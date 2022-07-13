@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSD Landing Page</title>
+    <link rel='preload' as='image' href='images/firstProject.jpg'>
+    <link rel='preload' as='image' href='images/mainBig.jpg'>
+    <link rel='preload' as='image' href='images/secondProject.jpg'>
+    <link rel='preload' as='image' href='images/secondSection.jpg'>
+    <link rel='preload' as='image' href='images/thirdProject.jpg'>
     <link rel="stylesheet" href="scss/main.css">
 </head>
 <body>
@@ -119,15 +124,42 @@
         <!-- TESTIMONIALS SECTION -->
         <article class='testimonials'>
             <div class='buttonSide'>
-                <h2>What our <span>Customers</span> Say</h2>
-                <!-- <button class='previous'>&rarr;</button> -->
-                <!-- <button class='forward'>&rarr;</button> -->
+                <h2>What Our <span>Customers</span> Say</h2>
+                <div class='controls'>
+                    <button class='previous' disabled>&larr;</button>
+                    <button class='forward'>&rarr;</button>
+                </div>
             </div>
             <div class='textSide'>
-
+                <blockquote>
+                    " At Riorku we have developed a huge team of
+                    of Interior Designers, architects, engineers
+                    and manufactures to make every dream become
+                    a reality. "
+                </blockquote>
+                <div class='userProfile'>
+                    <div><span class='profileBall'></span></div>
+                    <div>
+                        <h4>Annette Black</h4>
+                        <p>New Zealand</p>
+                    </div>
+                </div>
             </div>
         </article>
-        
+
+        <!-- LET US DISCUSS SECTION -->
+        <section class='discuss'>
+            <h2>Have an awesome project?</h2>
+            <div>
+                <button>Let's Discuss</button>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <footer>
+            <div class='topFooter'></div>
+            <div class='bottomFooter'><p>All rights reserved by Riorku</p></div>
+        </footer>
 
     </div>
 

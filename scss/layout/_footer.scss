@@ -1,0 +1,18 @@
+
+footer {
+    height: 35rem;
+    background-color: salmon;
+    display: flex;
+    flex-direction: column;
+    & .topFooter {
+        flex: 0 0 85%;
+        background-color: yellow;
+    }
+    & .bottomFooter {
+        flex: 0 0 15%;
+        @include bringCenter();
+        font-size: 1.3rem;
+        background-color: white;
+        font-family: $superSpecialFont;
+    }
+}

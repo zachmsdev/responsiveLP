@@ -13,7 +13,7 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding-right: 1.5rem;
+        padding-right: 7%;
         padding-top: 1rem;
     }
     & .titleBlock {
@@ -22,7 +22,7 @@ header {
         justify-content: flex-start;
         align-items: center;
         color: $specialBlue;
-        padding-left: 1.5rem;
+        padding-left: 7%;
         padding-top: 1rem;
     }
 }

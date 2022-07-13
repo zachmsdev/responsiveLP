@@ -69,7 +69,7 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 1.5rem;
+  padding-right: 7%;
   padding-top: 1rem;
 }
 
@@ -85,7 +85,7 @@ header .titleBlock {
       -ms-flex-align: center;
           align-items: center;
   color: #1d8cff;
-  padding-left: 1.5rem;
+  padding-left: 7%;
   padding-top: 1rem;
 }
 
@@ -160,18 +160,17 @@ main .sectionOne {
   gap: 1rem;
   background: white;
   width: 100%;
-  height: 47%;
+  height: 50%;
+  padding: 7%;
   font-family: "Arial";
 }
 
 main .sectionOne > h2 {
-  font-size: 2.2rem;
-  padding: 0rem 1rem;
+  font-size: calc(1.6rem + 1.5vw);
 }
 
 main .sectionOne > p {
-  font-size: 1.3rem;
-  padding: 0rem 1rem;
+  font-size: calc(0.75rem + 1.6vw);
   margin-bottom: 0.5rem;
 }
 
@@ -185,7 +184,7 @@ main .sectionTwo {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 53%;
+  height: 50%;
 }
 
 section {
@@ -199,7 +198,7 @@ section .subSectionOne {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow-wrap: anywhere;
-  padding-top: 3rem;
+  padding: 9% 7% 7% 7%;
   gap: 1rem;
   background: white;
   width: 100%;
@@ -227,9 +226,9 @@ section .subSectionOne > h3 {
 }
 
 section .subSectionOne > p {
-  font-size: 1.3rem;
-  margin-bottom: 0.75em;
-  padding: 0rem 1.5rem;
+  font-size: calc(0.75rem + 1.6vw);
+  margin-bottom: 1.4rem;
+  line-height: 1.2;
 }
 
 section .subSectionOne > * {
@@ -239,7 +238,7 @@ section .subSectionOne > * {
 section .subSectionTwo {
   background: url("../../images/secondSection.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: top;
   width: 100%;
   height: 50%;
 }
@@ -266,6 +265,7 @@ article .h3Side {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Arial";
+  font-size: calc(1.3rem + 1vw);
   font-weight: 500;
 }
 
@@ -355,7 +355,9 @@ article .pSide {
 
 .testimonials {
   background-color: lightgray;
-  height: 35rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -363,17 +365,180 @@ article .pSide {
 }
 
 .testimonials .buttonSide {
-  background-color: firebrick;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Arial";
+  text-align: center;
+  padding: 10% 7% 7% 7%;
+}
+
+.testimonials .buttonSide h2 {
+  font-size: 2.3rem;
+}
+
+.testimonials .buttonSide h2 > span {
+  color: #1d8cff;
+}
+
+.testimonials .buttonSide .controls > button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 4rem;
+}
+
+.testimonials .buttonSide .controls > button:nth-child(2) {
+  margin-left: 1rem;
 }
 
 .testimonials .textSide {
-  background-color: cyan;
   -webkit-box-flex: 1.5;
-      -ms-flex: 1.5 0 auto;
-          flex: 1.5 0 auto;
+      -ms-flex: 1.5 0 0px;
+          flex: 1.5 0 0;
+  font-family: "Arial";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  padding: 0% 7% 7% 7%;
+}
+
+.testimonials .textSide blockquote {
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 4%;
+}
+
+.testimonials .textSide .userProfile {
+  width: 13rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonials .textSide .userProfile div:nth-child(1) {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5 0 0px;
+          flex: 1.5 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials .textSide .userProfile div:nth-child(1) > .profileBall {
+  height: 3rem;
+  background-color: black;
+  width: 3.25rem;
+  border-radius: 50%;
+}
+
+.testimonials .textSide .userProfile div:nth-child(2) {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 0 0px;
+          flex: 3 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.175rem;
+}
+
+.testimonials .textSide .userProfile div:nth-child(2) > h4 {
+  font-size: 1.1rem;
+}
+
+.testimonials .textSide .userProfile div:nth-child(2) > p {
+  font-size: 1rem;
+}
+
+.discuss {
+  height: 17rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0rem 6vw;
+  background-color: #1d8cff;
+}
+
+.discuss > h2 {
+  color: white;
+  font-family: "Arial";
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.discuss div {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.discuss div > button {
+  font-family: "Arial";
+  font-weight: 700;
+  background-color: white;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  color: #1d8cff;
+  padding: 1.1rem;
 }
 
 aside {
@@ -406,5 +571,42 @@ aside ul li {
 
 aside ul li:nth-child(4) {
   display: none;
+}
+
+footer {
+  height: 35rem;
+  background-color: salmon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .topFooter {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85%;
+          flex: 0 0 85%;
+  background-color: yellow;
+}
+
+footer .bottomFooter {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+  background-color: white;
+  font-family: "Arial";
 }
 /*# sourceMappingURL=main.css.map */

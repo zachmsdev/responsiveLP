@@ -15,7 +15,7 @@ main {
         background: white;
         width: 100%;
         height: 50%;
-        padding: 7%;
+        padding: 7% 9%;
         font-family: $superSpecialFont;
         & > h2 {
             font-size: calc(1.6rem + 1.5vw);
@@ -122,10 +122,10 @@ article {
     }
     & .textSide {
         background-color: white;
-        padding: 1rem;
+        padding: 8%;
         text-align: center;
         font-family: $superSpecialFont;
-        flex: 1 0 auto;
+        flex: 0.25 0 auto;
         @include bringCenter();
         gap: 0.5rem;
         flex-direction: column;
@@ -175,9 +175,9 @@ article {
         flex-direction: column;
         font-family: $superSpecialFont;
         text-align: center;
-        padding: 10% 7% 7% 7%;
+        padding: 10% 7% 3.5% 7%;
         & h2 {
-            font-size: 2.3rem;
+            font-size: calc(1.5rem + 2vw);
             & > span {
                 color: $specialBlue;
             }
@@ -207,6 +207,7 @@ article {
             text-align: center;
             background-color: #f6f6f6;
             padding: 4%;
+            max-width: 306px;
         }
         & .userProfile {
             width: 13rem;
@@ -248,7 +249,7 @@ article {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0rem 6vw;
+    padding: 0rem 7vw;
     background-color: $specialBlue;
     & > h2 {
         color: white;

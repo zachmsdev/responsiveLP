@@ -161,7 +161,7 @@ main .sectionOne {
   background: white;
   width: 100%;
   height: 50%;
-  padding: 7%;
+  padding: 7% 9%;
   font-family: "Arial";
 }
 
@@ -302,12 +302,12 @@ article .pSide {
 
 .project .textSide {
   background-color: white;
-  padding: 1rem;
+  padding: 8%;
   text-align: center;
   font-family: "Arial";
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-box-flex: 0.25;
+      -ms-flex: 0.25 0 auto;
+          flex: 0.25 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,11 +383,11 @@ article .pSide {
           flex-direction: column;
   font-family: "Arial";
   text-align: center;
-  padding: 10% 7% 7% 7%;
+  padding: 10% 7% 3.5% 7%;
 }
 
 .testimonials .buttonSide h2 {
-  font-size: 2.3rem;
+  font-size: calc(1.5rem + 2vw);
 }
 
 .testimonials .buttonSide h2 > span {
@@ -435,6 +435,7 @@ article .pSide {
   text-align: center;
   background-color: #f6f6f6;
   padding: 4%;
+  max-width: 306px;
 }
 
 .testimonials .textSide .userProfile {
@@ -506,7 +507,7 @@ article .pSide {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0rem 6vw;
+  padding: 0rem 7vw;
   background-color: #1d8cff;
 }
 
@@ -574,7 +575,7 @@ aside ul li:nth-child(4) {
 }
 
 footer {
-  height: 35rem;
+  height: 32rem;
   background-color: salmon;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -590,6 +591,104 @@ footer .topFooter {
       -ms-flex: 0 0 85%;
           flex: 0 0 85%;
   background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .topFooter .companySide {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  width: 100%;
+  padding: 0rem 10vw;
+  background-color: white;
+  font-family: "Arial";
+}
+
+footer .topFooter .companySide div {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer .topFooter .companySide div > h2 {
+  margin-bottom: 0.75rem;
+  color: #1d8cff;
+}
+
+footer .topFooter .companySide div > p {
+  font-size: calc(1rem + 1.4vw);
+}
+
+footer .topFooter .contactSide {
+  -webkit-box-flex: 1.15;
+      -ms-flex: 1.15 0 0px;
+          flex: 1.15 0 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Arial";
+  background-color: white;
+  font-size: calc(1rem + 1.7vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+footer .topFooter .contactSide ul li {
+  margin-bottom: 0.7rem;
+}
+
+footer .topFooter .contactSide ul li:nth-child(1) {
+  font-weight: 700;
+}
+
+footer .topFooter .contactSide div > p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+footer .topFooter .contactSide div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+footer .topFooter .contactSide div ul > li {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+footer .topFooter .contactSide div ul li:nth-child(1) {
+  background-image: url("../images/facebook.png");
+  background-position: center;
+  background-size: cover;
+}
+
+footer .topFooter .contactSide div ul li:nth-child(2) {
+  background-image: url("../images/insta.png");
+  background-position: center;
+  background-size: cover;
+}
+
+footer .topFooter .contactSide div ul li:nth-child(3) {
+  background-image: url("../images/linkedIn.png");
+  background-position: center;
+  background-size: cover;
 }
 
 footer .bottomFooter {

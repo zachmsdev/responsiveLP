@@ -1,12 +1,78 @@
 
 footer {
-    height: 35rem;
+    height: 32rem;
     background-color: salmon;
     display: flex;
     flex-direction: column;
     & .topFooter {
         flex: 0 0 85%;
         background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        & .companySide {
+            flex: 1 0 0;
+            width: 100%;
+            padding: 0rem 10vw;
+            background-color: white;
+            font-family: $superSpecialFont;
+            & div {
+                text-align: center;
+                margin-top: 2rem;
+                & > h2 {
+                    margin-bottom: 0.75rem;
+                    color: $specialBlue;
+                }
+                & > p {
+                    font-size: calc(1rem + 1.4vw);
+                }
+            }
+        }
+        & .contactSide {
+            flex: 1.15 0 0;
+            width: 100%;
+            text-align: center;
+            font-family: $superSpecialFont;
+            background-color: white;
+            font-size: calc(1rem + 1.7vw);
+            @include bringCenter();
+            gap: 2rem;
+            & ul li {
+                margin-bottom: 0.7rem;
+                &:nth-child(1) {
+                    font-weight: 700;
+                }
+            }
+            & div {
+                & > p {
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.75rem;
+                }
+                & ul {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                & > li {
+                    width: 2.7rem;
+                    height: 2.7rem;
+                }
+                    & li:nth-child(1) {
+                        background-image: url('../images/facebook.png');
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    & li:nth-child(2) {
+                        background-image: url('../images/insta.png');
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    & li:nth-child(3) {
+                        background-image: url('../images/linkedIn.png');
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
     }
     & .bottomFooter {
         flex: 0 0 15%;

@@ -24,6 +24,16 @@ header {
         color: $specialBlue;
         padding-left: 7%;
         padding-top: 1rem;
+        & > h2 {
+            font-family: $superSpecialFont;
+        }
+        & > h2 span {
+            display: inline-block;
+            transform: rotateY(0deg);
+            animation: spinR 1.5s linear;
+            animation-fill-mode: forwards;
+            transform-style: preserve-3d;
+        }
     }
 }
 
@@ -51,5 +61,11 @@ header {
         width: 100%;
         border-radius: 1rem;
         background-color: black;
+    }
+}
+
+@keyframes spinR {
+    100% {
+        transform: rotateY(180deg);
     }
 }

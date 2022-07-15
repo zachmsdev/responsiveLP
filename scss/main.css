@@ -89,6 +89,22 @@ header .titleBlock {
   padding-top: 1rem;
 }
 
+header .titleBlock > h2 {
+  font-family: "Arial";
+}
+
+header .titleBlock > h2 span {
+  display: inline-block;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-animation: spinR 1.5s linear;
+          animation: spinR 1.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
 .burgerIcon {
   height: 25px;
   width: 25px;
@@ -128,6 +144,193 @@ header .titleBlock {
   width: 100%;
   border-radius: 1rem;
   background-color: black;
+}
+
+@-webkit-keyframes spinR {
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes spinR {
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+aside {
+  width: 100%;
+  height: 7rem;
+  background: lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+aside ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+aside ul li {
+  font-family: 'Verdana';
+  font-size: 1.5rem;
+  color: gray;
+}
+
+aside ul li:nth-child(4) {
+  display: none;
+}
+
+footer {
+  height: 31rem;
+  background-color: salmon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .topFooter {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85%;
+          flex: 0 0 85%;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .topFooter .companySide {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  width: 100%;
+  padding: 0rem 10vw;
+  background-color: white;
+  font-family: "Arial";
+}
+
+footer .topFooter .companySide div {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer .topFooter .companySide div h2 {
+  margin-bottom: 0.75rem;
+  color: #1d8cff;
+}
+
+footer .topFooter .companySide div h2 > span {
+  display: inline-block;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+footer .topFooter .companySide div > p {
+  font-size: calc(1rem + 1.4vw);
+}
+
+footer .topFooter .contactSide {
+  -webkit-box-flex: 1.15;
+      -ms-flex: 1.15 0 0px;
+          flex: 1.15 0 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Arial";
+  background-color: white;
+  font-size: calc(1rem + 1.7vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+footer .topFooter .contactSide ul li {
+  margin-bottom: 0.7rem;
+}
+
+footer .topFooter .contactSide ul li:nth-child(1) {
+  font-weight: 700;
+}
+
+footer .topFooter .contactSide div > p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+footer .topFooter .contactSide div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+footer .topFooter .contactSide div ul > li {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+footer .topFooter .contactSide div ul li:nth-child(1) {
+  background-image: url("../images/facebook.png");
+  background-position: center;
+  background-size: cover;
+}
+
+footer .topFooter .contactSide div ul li:nth-child(2) {
+  background-image: url("../images/insta.png");
+  background-position: center;
+  background-size: cover;
+}
+
+footer .topFooter .contactSide div ul li:nth-child(3) {
+  background-image: url("../images/linkedIn.png");
+  background-position: center;
+  background-size: cover;
+}
+
+footer .bottomFooter {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+  background-color: white;
+  font-family: "Arial";
 }
 
 main {
@@ -198,7 +401,7 @@ section .subSectionOne {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow-wrap: anywhere;
-  padding: 9% 7% 7% 7%;
+  padding: 8.5% 7% 7% 7%;
   gap: 1rem;
   background: white;
   width: 100%;
@@ -542,170 +745,71 @@ article .pSide {
   padding: 1.1rem;
 }
 
-aside {
-  width: 100%;
-  height: 7rem;
-  background: lightgray;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-aside ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1em;
-}
-
-aside ul li {
-  font-family: 'Verdana';
-  font-size: 1.5rem;
-  color: gray;
-}
-
-aside ul li:nth-child(4) {
-  display: none;
-}
-
-footer {
-  height: 32rem;
-  background-color: salmon;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-footer .topFooter {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 85%;
-          flex: 0 0 85%;
-  background-color: yellow;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-footer .topFooter .companySide {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
-  width: 100%;
-  padding: 0rem 10vw;
-  background-color: white;
-  font-family: "Arial";
-}
-
-footer .topFooter .companySide div {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-footer .topFooter .companySide div > h2 {
-  margin-bottom: 0.75rem;
-  color: #1d8cff;
-}
-
-footer .topFooter .companySide div > p {
-  font-size: calc(1rem + 1.4vw);
-}
-
-footer .topFooter .contactSide {
-  -webkit-box-flex: 1.15;
-      -ms-flex: 1.15 0 0px;
-          flex: 1.15 0 0;
-  width: 100%;
-  text-align: center;
-  font-family: "Arial";
-  background-color: white;
-  font-size: calc(1rem + 1.7vw);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2rem;
-}
-
-footer .topFooter .contactSide ul li {
-  margin-bottom: 0.7rem;
-}
-
-footer .topFooter .contactSide ul li:nth-child(1) {
-  font-weight: 700;
-}
-
-footer .topFooter .contactSide div > p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-footer .topFooter .contactSide div ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 1rem;
-}
-
-footer .topFooter .contactSide div ul > li {
-  width: 2.7rem;
-  height: 2.7rem;
-}
-
-footer .topFooter .contactSide div ul li:nth-child(1) {
-  background-image: url("../images/facebook.png");
-  background-position: center;
-  background-size: cover;
-}
-
-footer .topFooter .contactSide div ul li:nth-child(2) {
-  background-image: url("../images/insta.png");
-  background-position: center;
-  background-size: cover;
-}
-
-footer .topFooter .contactSide div ul li:nth-child(3) {
-  background-image: url("../images/linkedIn.png");
-  background-position: center;
-  background-size: cover;
-}
-
-footer .bottomFooter {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 15%;
-          flex: 0 0 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.3rem;
-  background-color: white;
-  font-family: "Arial";
+@media only screen and (min-width: 28.125em) {
+  main {
+    height: 57rem;
+  }
+  header .titleBlock {
+    padding-top: 2rem;
+  }
+  header nav {
+    padding-top: 2rem;
+  }
+  header .titleBlock > h2 {
+    font-size: calc(2rem + 0.75vw);
+  }
+  .sectionOne {
+    padding: 7% 12%;
+  }
+  .sectionTwo {
+    -webkit-filter: hue-rotate(179deg);
+            filter: hue-rotate(179deg);
+    background-position: top;
+  }
+  aside ul li:nth-child(4) {
+    display: initial;
+  }
+  section .subSectionOne {
+    padding: 7% 11% 7% 11%;
+  }
+  section .subSectionOne > h3 {
+    font-size: 2.4rem;
+  }
+  section .subSectionOne > p {
+    font-size: calc(0.85rem + 1.4vw);
+  }
+  section .subSectionOne > ul {
+    font-size: 1.75rem;
+  }
+  section {
+    height: 59rem;
+  }
+  main .sectionOne {
+    padding: 7% 11%;
+  }
+  main .sectionOne > h2 {
+    font-size: calc(1.65rem + 1.5vw);
+  }
+  .discuss {
+    padding: 0rem 10vw;
+  }
+  .project {
+    height: 57rem;
+  }
+  .project .textSide {
+    -webkit-box-flex: 0.35;
+        -ms-flex: 0.35 0 auto;
+            flex: 0.35 0 auto;
+  }
+  .testimonials .textSide blockquote {
+    max-width: 348px;
+    padding: 5% 4%;
+  }
+  footer .topFooter .contactSide {
+    font-size: calc(1rem + 1.4vw);
+  }
+  footer .topFooter .companySide div > p {
+    font-size: calc(1rem + 1.2vw);
+  }
 }
 /*# sourceMappingURL=main.css.map */

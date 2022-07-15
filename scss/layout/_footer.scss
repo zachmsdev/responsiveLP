@@ -1,6 +1,6 @@
 
 footer {
-    height: 32rem;
+    height: 31rem;
     background-color: salmon;
     display: flex;
     flex-direction: column;
@@ -18,9 +18,13 @@ footer {
             & div {
                 text-align: center;
                 margin-top: 2rem;
-                & > h2 {
+                & h2 {
                     margin-bottom: 0.75rem;
                     color: $specialBlue;
+                    & > span {
+                        display: inline-block;
+                        transform: rotateY(180deg);
+                    }
                 }
                 & > p {
                     font-size: calc(1rem + 1.4vw);

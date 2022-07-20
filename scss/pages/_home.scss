@@ -29,7 +29,7 @@ main {
         }
     }
     & .sectionTwo {
-        background: url('../../images/mainBig.jpg');
+        background: url('../images/mainBig.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         // background-position: 100% 100%;
@@ -78,7 +78,7 @@ section {
         }
     }
     & .subSectionTwo {
-        background: url('../../images/secondSection.jpg');
+        background: url('../images/secondSection.jpg');
         background-size: cover;
         background-position: top;
         width: 100%;
@@ -140,7 +140,7 @@ article {
 }
 
 .one .photoSide {
-    background: url('../../images/firstProject.jpg');
+    background: url('../images/firstProject.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     // background-position: 100% 100%;
@@ -148,7 +148,7 @@ article {
 }
 
 .two .photoSide {
-    background: url('../../images/secondProject.jpg');
+    background: url('../images/secondProject.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     // background-position: 100% 100%;
@@ -156,7 +156,7 @@ article {
 }
 
 .three .photoSide {
-    background: url('../../images/thirdProject.jpg');
+    background: url('../images/thirdProject.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     // background-position: 100% 100%;
@@ -221,7 +221,6 @@ article {
                     background-color: black;
                     width: 3.25rem;
                     border-radius: 50%;
-                    // border-radius: 50%;
                 }
             }
             & div:nth-child(2) {
@@ -273,16 +272,6 @@ article {
     }
 }
 
-// Testerz
-
-// html {
-//     display: none !important;        
-// }
-
-// html {
-//     display: initial !important;
-// }
-
 
 // -------> Media Queries Section [mobile first]
 
@@ -290,7 +279,7 @@ article {
 @media only screen and (min-width: 28.125em) {  // 450 PX and up
 
     main {
-        height: 57rem;
+        height: 63rem;
     }
 
     header .titleBlock {
@@ -319,7 +308,7 @@ article {
     }
 
     section .subSectionOne {
-        padding: 7% 11% 7% 11%;
+        padding: 6% 11% 7% 11%;
         & > h3 {
             font-size: 2.4rem;
         }
@@ -345,7 +334,7 @@ article {
     }
 
     .discuss {
-        padding: 0rem 10vw;
+        padding: 0rem 10.5vw;
     }
 
     .project {
@@ -368,3 +357,84 @@ article {
         font-size: calc(1rem + 1.2vw);
     }
 }
+
+@media only screen and (min-width: 37.5em) { // 600 PX and up
+
+    header {
+        height: 5rem;
+        & nav {
+            padding-top: 0;
+            padding-right: 7.5%;
+        }
+        & .titleBlock {
+            padding-top: 0;
+            padding-left: 7.5%;
+        }
+    }
+
+    .burgerIcon {
+        z-index: 5;
+    }
+
+    main {
+        height: 48rem;
+        position: relative;
+        flex-direction: row;
+        & .sectionOne {
+            width: 51%;
+            height: 100%;
+            padding: 7% 3% 7% 8%;
+            & > button {
+                display: flex;
+                align-self: flex-start;
+            }
+            & > h2 {
+                text-align: left;
+                font-size: calc(1.65rem + 1.5vw);
+                line-height: 1.2;
+            }
+            & > p {
+                line-height: 1.1;
+                padding-right: 4rem;
+                text-align: left;
+                font-size: calc(0.75rem + 1.2vw);
+            }
+        }
+        & .sectionTwo {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            width: 50%;
+            height: 110.5%;
+        }
+    }
+
+    aside ul {
+        gap: 1.5em;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 53rem;
+        & .subSectionOne {
+            width: 50%;
+            height: 100%;
+            padding: 8% 7% 7% 7%;
+            & > p {
+                line-height: 1.2;
+                font-size: calc(0.85rem + 1vw);
+            }
+            & > h3 {
+                font-size: 2.4rem;
+                line-height: 1.1;
+            }
+        }
+        & .subSectionTwo {
+            width: 50%;
+            height: 100%;
+        }
+    }
+
+}  
+

@@ -4,6 +4,13 @@ footer {
     background-color: salmon;
     display: flex;
     flex-direction: column;
+    & ul > li {
+        cursor: pointer;
+        &:not(:nth-child(1)):hover {
+            font-style: italic;
+            color: #1d8cff;
+        }
+    }
     & .topFooter {
         flex: 0 0 85%;
         background-color: yellow;
@@ -23,6 +30,7 @@ footer {
                     color: $specialBlue;
                     & > span {
                         display: inline-block;
+                        font-size: 25px;
                         transform: rotateY(180deg);
                     }
                 }

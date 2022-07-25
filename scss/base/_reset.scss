@@ -12,15 +12,16 @@ html {
 
 body {
     min-height: 100vh;
-    padding: 1.5rem 0rem;
+    padding: 2.5rem 0rem;
     font-size: 16px;
     background-color: $bodyColor;
 }
 
 .siteWrapper {
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: yellow;
+    background-color: white;
 }
 
 ul li {

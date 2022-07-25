@@ -29,6 +29,7 @@ header {
         }
         & > h2 span {
             display: inline-block;
+            font-size: 25px;
             transform: rotateY(0deg);
             animation: spinR 1.5s linear;
             animation-fill-mode: forwards;

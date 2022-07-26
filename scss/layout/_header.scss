@@ -15,6 +15,23 @@ header {
         align-items: center;
         padding-right: 7%;
         padding-top: 1rem;
+        & .desktopNav {
+            display: none;
+            padding-top: 2rem;
+                & > li {
+                    margin-left: 3rem;
+                    @include bringCenter();
+                    &:nth-child(4) {
+                        padding: 1rem 1.3rem;
+                        color: white;
+                        background-color: $specialBlue;
+                    }
+                    &:nth-child(1) {
+                        font-weight: bold;
+                        margin-left: 0rem;
+                    }
+                }
+        }
     }
     & .titleBlock {
         background-color: white;

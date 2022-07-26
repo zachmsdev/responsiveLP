@@ -9,11 +9,19 @@
     background: $specialBlue;
     color: white;
     font-family: $superSpecialFont;
+    transition: box-shadow 0.25s ease-in-out;
+    &:hover {
+        box-shadow: 3px 3px 0px black;
+    }
 }
 
 
+button {
+    cursor: pointer;
+}
 
-
-
-
-// White Button
+.controls button {
+    &:hover {
+        box-shadow: none;
+    }
+}

@@ -1,5 +1,10 @@
 
-// Blue Button
+
+// Fake buttons just because fake landing page.
+
+button {
+    cursor: pointer;
+}
 
 .blueButton {
     appearance: none;
@@ -11,17 +16,71 @@
     font-family: $superSpecialFont;
     transition: box-shadow 0.25s ease-in-out;
     &:hover {
+        box-shadow: -3px 3px 0px black;
+    }
+}
+
+// BUTTON HOVERS
+
+.project.two h4 {
+    cursor: pointer;
+    &:hover span {
+        padding-right: 1.25rem;
+    }
+    & > span {
+        padding-right: 0.25rem;
+        transition: padding 0.5s ease-in-out;
+    }
+}
+
+.project h4 {
+    cursor: pointer;
+    &:hover span {
+        padding-left: 1rem;
+    }
+    & > span {
+        transition: padding 0.5s ease-in-out;
+    }
+}
+
+.desktopNav li:nth-child(4) {
+    transition: box-shadow 0.25s ease-in-out;
+    &:hover {
         box-shadow: 3px 3px 0px black;
     }
 }
 
 
-button {
-    cursor: pointer;
-}
 
 .controls button {
     &:hover {
         box-shadow: none;
+    }
+    &.forward {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
+    &.forward.focusAnimation {
+        animation: forwardAnimation 1s alternate infinite;
+    }
+}
+
+.discuss button {
+    transition: padding 0.25s ease-in-out;
+    &:hover {
+        padding: 1.5rem 1.75rem;
+        background: #d5d5d5;
+    }
+}
+
+.contactSide div ul li {
+    &:hover {
+        filter: grayscale(1);
+    }
+}
+
+@keyframes forwardAnimation {
+    to {
+        transform: scale(1.15);
     }
 }

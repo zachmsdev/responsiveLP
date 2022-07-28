@@ -4,16 +4,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     & > * {
         flex-basis: 50%;
         height: 100%;
     }
     & nav {
-        background: white;
+        background: transparent;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         padding-right: 7%;
+        z-index: 6;
         padding-top: 1rem;
         & .desktopNav {
             display: none;
@@ -55,30 +57,85 @@ header {
     }
 }
 
-.burgerIcon {       // mobile menu icon
+.burgerIcon {       // ----> Mobile Menu
     height: 25px;
     width: 25px;
     @include bringCenter();
+    cursor: pointer;
     flex-direction: column;
     gap: 0.2em;
+    z-index: 9;
+    transition: transform 0.5s ease-in-out;
     & > div:nth-child(1) {
         height: 3px;
         width: 100%;
         border-radius: 1rem;
         background-color: black;
         top: 0.5rem;
+        transition: transform 0.5s ease-in-out;
     }
     & > div:nth-child(2) {
         height: 3px;
         width: 100%;
         border-radius: 1rem;
         background-color: black;
+        transition: opacity 0.7s ease-out;
     }
     & > div:nth-child(3) {
+        transition: transform 0.5s ease-in-out;
         height: 3px;
         width: 100%;
         border-radius: 1rem;
         background-color: black;
+    }
+    // burger animation on click
+    &.clicked {
+        transform: rotate(180deg);
+        & > div:nth-child(1) {
+            transform: rotate(-48deg) translate(-5px, 3px);
+            background-color: $specialBlue;
+        }
+        & > div:nth-child(2) {
+            display: none;
+            opacity: 0;
+        }
+        & > div:nth-child(3) {
+            transform: rotate(49deg) translate(-2px, 1px);
+            background-color: $specialBlue;
+        }
+    }
+}
+
+.mobileMenu {
+    z-index: 5;
+    position: absolute;
+    padding-top: 11rem;
+    text-align: right;
+    background-color: white;
+    right: 0;
+    top: 0;
+    width: 0rem;
+    height: 52rem;
+    will-change: contents;
+    transition: width 0.35s ease-in;
+    &.showMenu {
+        width: 24rem;
+        & li {
+            transition: opacity 0.85s ease-in, color 0.35s ease;
+            opacity: 1;
+        }
+    }
+    & li {
+        padding-right: 4rem;
+        cursor: pointer;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        font-family: $superSpecialFont;
+        display: none;
+        opacity: 0;
+        &:hover {
+            color: $specialBlue;
+        }
     }
 }
 

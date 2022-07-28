@@ -28,6 +28,10 @@ ul li {
   list-style-type: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .blueButton {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -45,17 +49,93 @@ ul li {
 }
 
 .blueButton:hover {
-  -webkit-box-shadow: 3px 3px 0px black;
-          box-shadow: 3px 3px 0px black;
+  -webkit-box-shadow: -3px 3px 0px black;
+          box-shadow: -3px 3px 0px black;
 }
 
-button {
+.project.two h4 {
   cursor: pointer;
+}
+
+.project.two h4:hover span {
+  padding-right: 1.25rem;
+}
+
+.project.two h4 > span {
+  padding-right: 0.25rem;
+  -webkit-transition: padding 0.5s ease-in-out;
+  transition: padding 0.5s ease-in-out;
+}
+
+.project h4 {
+  cursor: pointer;
+}
+
+.project h4:hover span {
+  padding-left: 1rem;
+}
+
+.project h4 > span {
+  -webkit-transition: padding 0.5s ease-in-out;
+  transition: padding 0.5s ease-in-out;
+}
+
+.desktopNav li:nth-child(4) {
+  -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out, -webkit-box-shadow 0.25s ease-in-out;
+}
+
+.desktopNav li:nth-child(4):hover {
+  -webkit-box-shadow: 3px 3px 0px black;
+          box-shadow: 3px 3px 0px black;
 }
 
 .controls button:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.controls button.forward {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.controls button.forward.focusAnimation {
+  -webkit-animation: forwardAnimation 1s alternate infinite;
+          animation: forwardAnimation 1s alternate infinite;
+}
+
+.discuss button {
+  -webkit-transition: padding 0.25s ease-in-out;
+  transition: padding 0.25s ease-in-out;
+}
+
+.discuss button:hover {
+  padding: 1.5rem 1.75rem;
+  background: #d5d5d5;
+}
+
+.contactSide div ul li:hover {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+@-webkit-keyframes forwardAnimation {
+  to {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+
+@keyframes forwardAnimation {
+  to {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
 }
 
 header {
@@ -69,6 +149,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 header > * {
@@ -78,7 +159,7 @@ header > * {
 }
 
 header nav {
-  background: white;
+  background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,6 +170,7 @@ header nav {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 7%;
+  z-index: 6;
   padding-top: 1rem;
 }
 
@@ -166,11 +248,17 @@ header .titleBlock > h2 span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.2em;
+  z-index: 9;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .burgerIcon > div:nth-child(1) {
@@ -179,6 +267,10 @@ header .titleBlock > h2 span {
   border-radius: 1rem;
   background-color: black;
   top: 0.5rem;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .burgerIcon > div:nth-child(2) {
@@ -186,13 +278,80 @@ header .titleBlock > h2 span {
   width: 100%;
   border-radius: 1rem;
   background-color: black;
+  -webkit-transition: opacity 0.7s ease-out;
+  transition: opacity 0.7s ease-out;
 }
 
 .burgerIcon > div:nth-child(3) {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   height: 3px;
   width: 100%;
   border-radius: 1rem;
   background-color: black;
+}
+
+.burgerIcon.clicked {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.burgerIcon.clicked > div:nth-child(1) {
+  -webkit-transform: rotate(-48deg) translate(-5px, 3px);
+          transform: rotate(-48deg) translate(-5px, 3px);
+  background-color: #1d8cff;
+}
+
+.burgerIcon.clicked > div:nth-child(2) {
+  display: none;
+  opacity: 0;
+}
+
+.burgerIcon.clicked > div:nth-child(3) {
+  -webkit-transform: rotate(49deg) translate(-2px, 1px);
+          transform: rotate(49deg) translate(-2px, 1px);
+  background-color: #1d8cff;
+}
+
+.mobileMenu {
+  z-index: 5;
+  position: absolute;
+  padding-top: 11rem;
+  text-align: right;
+  background-color: white;
+  right: 0;
+  top: 0;
+  width: 0rem;
+  height: 52rem;
+  will-change: contents;
+  -webkit-transition: width 0.35s ease-in;
+  transition: width 0.35s ease-in;
+}
+
+.mobileMenu.showMenu {
+  width: 24rem;
+}
+
+.mobileMenu.showMenu li {
+  -webkit-transition: opacity 0.85s ease-in, color 0.35s ease;
+  transition: opacity 0.85s ease-in, color 0.35s ease;
+  opacity: 1;
+}
+
+.mobileMenu li {
+  padding-right: 4rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-family: "Arial";
+  display: none;
+  opacity: 0;
+}
+
+.mobileMenu li:hover {
+  color: #1d8cff;
 }
 
 @-webkit-keyframes spinR {
@@ -229,6 +388,7 @@ aside ul {
   display: -ms-flexbox;
   display: flex;
   gap: 1em;
+  font-family: "Arial";
 }
 
 aside ul li {
@@ -239,6 +399,32 @@ aside ul li {
 
 aside ul li:nth-child(4) {
   display: none;
+}
+
+aside .clientOne {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+aside .clientTwo {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+aside .clientThree {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.clientThree.helloClients,
+.clientTwo.helloClients,
+.clientOne.helloClients {
+  opacity: 1;
 }
 
 footer {
@@ -447,10 +633,6 @@ main .sectionTwo {
   background-position: center;
   width: 100%;
   height: 50%;
-}
-
-aside ul {
-  font-family: "Arial";
 }
 
 section {
@@ -899,10 +1081,7 @@ article .pSide {
   }
   header nav {
     padding-top: 0;
-    padding-right: 7.5%;
-  }
-  header nav > .burgerIcon {
-    padding-top: 0.75rem;
+    padding-right: 4.5%;
   }
   header .titleBlock {
     padding-top: 0;
@@ -939,6 +1118,7 @@ article .pSide {
     display: flex;
     -ms-flex-item-align: start;
         align-self: flex-start;
+    padding: 0.85rem 1.25rem;
   }
   main .sectionOne > h2 {
     text-align: left;
@@ -1320,8 +1500,14 @@ article .pSide {
   header nav .desktopNav > li {
     cursor: pointer;
   }
-  header nav .desktopNav > li:not(:nth-child(4)):hover {
+  header nav .desktopNav > li:nth-child(2):hover {
     color: #1d8cff;
+  }
+  header nav .desktopNav > li:nth-child(3):hover {
+    color: #1d8cff;
+  }
+  .mobileMenu {
+    display: none;
   }
   main .sectionTwo {
     position: relative;
@@ -1337,9 +1523,6 @@ article .pSide {
     background-image: url(../images/smallMain.jpg);
     background-size: cover;
     background-position: center;
-  }
-  main .sectionOne > button {
-    padding: 1rem 1.5rem;
   }
   main .sectionOne > h2 {
     font-size: 4rem;

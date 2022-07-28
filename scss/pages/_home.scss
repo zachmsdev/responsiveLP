@@ -39,10 +39,6 @@ main {
     }
 }
 
-aside ul {
-    font-family: $superSpecialFont
-}
-
 // -------> Hero Sub-Section
 
 section {
@@ -385,10 +381,7 @@ article {
         height: 5rem;
         & nav {
             padding-top: 0;
-            padding-right: 7.5%;
-            & > .burgerIcon {
-                padding-top: 0.75rem;
-            }
+            padding-right: 4.5%;
         }
         & .titleBlock {
             padding-top: 0;
@@ -401,6 +394,9 @@ article {
 
     .burgerIcon {
         z-index: 5;
+        // &.clicked {
+        //     transform: translateX(28px);
+        // }
     }
 
     p {
@@ -422,6 +418,7 @@ article {
             & > button {
                 display: flex;
                 align-self: flex-start;
+                padding: 0.85rem 1.25rem;
             }
             & > h2 {
                 text-align: left;
@@ -760,12 +757,19 @@ article {
                 font-size: 1.5rem;
                 & > li {
                     cursor: pointer;
-                    &:not(:nth-child(4)):hover {
+                    &:nth-child(2):hover {
+                        color: $specialBlue;
+                    }
+                    &:nth-child(3):hover {
                         color: $specialBlue;
                     }
                 }
             }
         }
+    }
+
+    .mobileMenu {
+        display: none;
     }
 
     main {
@@ -785,9 +789,6 @@ article {
             }
         }
         & .sectionOne {
-            & > button {
-                padding: 1rem 1.5rem;
-            }
             & > h2 {
                 font-size: 4rem;
                 max-width: 344px;

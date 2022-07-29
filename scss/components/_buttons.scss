@@ -1,6 +1,6 @@
 
 
-// Fake buttons just because fake landing page.
+// Fake buttons because fake landing page
 
 button {
     cursor: pointer;
@@ -23,10 +23,6 @@ button {
 // BUTTON HOVERS
 
 .project.two h4 {
-    cursor: pointer;
-    &:hover span {
-        padding-right: 1.25rem;
-    }
     & > span {
         padding-right: 0.25rem;
         transition: padding 0.5s ease-in-out;
@@ -35,9 +31,6 @@ button {
 
 .project h4 {
     cursor: pointer;
-    &:hover span {
-        padding-left: 1rem;
-    }
     & > span {
         transition: padding 0.5s ease-in-out;
     }

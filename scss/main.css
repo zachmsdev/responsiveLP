@@ -53,14 +53,6 @@ button {
           box-shadow: -3px 3px 0px black;
 }
 
-.project.two h4 {
-  cursor: pointer;
-}
-
-.project.two h4:hover span {
-  padding-right: 1.25rem;
-}
-
 .project.two h4 > span {
   padding-right: 0.25rem;
   -webkit-transition: padding 0.5s ease-in-out;
@@ -69,10 +61,6 @@ button {
 
 .project h4 {
   cursor: pointer;
-}
-
-.project h4:hover span {
-  padding-left: 1rem;
 }
 
 .project h4 > span {
@@ -324,14 +312,14 @@ header .titleBlock > h2 span {
   right: 0;
   top: 0;
   width: 0rem;
-  height: 52rem;
+  height: 46rem;
   will-change: contents;
   -webkit-transition: width 0.35s ease-in;
   transition: width 0.35s ease-in;
 }
 
 .mobileMenu.showMenu {
-  width: 24rem;
+  width: 22rem;
 }
 
 .mobileMenu.showMenu li {
@@ -350,7 +338,11 @@ header .titleBlock > h2 span {
   opacity: 0;
 }
 
-.mobileMenu li:hover {
+.mobileMenu li:nth-child(1) {
+  font-weight: bold;
+}
+
+.mobileMenu li:not(:nth-child(1)):hover {
   color: #1d8cff;
 }
 
@@ -392,7 +384,7 @@ aside ul {
 }
 
 aside ul li {
-  font-family: 'Verdana';
+  font-family: "Arial";
   font-size: 1.5rem;
   color: gray;
 }
@@ -402,21 +394,21 @@ aside ul li:nth-child(4) {
 }
 
 aside .clientOne {
-  opacity: 0;
+  display: none;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
 
 aside .clientTwo {
   position: absolute;
-  opacity: 0;
+  display: none;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
 
 aside .clientThree {
   position: absolute;
-  opacity: 0;
+  display: none;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
@@ -424,7 +416,9 @@ aside .clientThree {
 .clientThree.helloClients,
 .clientTwo.helloClients,
 .clientOne.helloClients {
-  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer {
@@ -815,9 +809,7 @@ article .pSide {
 
 .testimonials {
   background-color: lightgray;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1215,6 +1207,9 @@ article .pSide {
     height: 31rem;
     margin-bottom: 3rem;
   }
+  .project h4:hover span {
+    padding-left: 1rem;
+  }
   .project.one > .photoSide {
     background-position: right;
   }
@@ -1224,6 +1219,9 @@ article .pSide {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
     padding-right: 5%;
+  }
+  .project.two h4:hover span {
+    padding-right: 1.25rem;
   }
   .project.two .textSide {
     padding: 0% 5%;
@@ -1389,11 +1387,11 @@ article .pSide {
     font-size: 2rem;
   }
   section .subSectionOne > h3 {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
   section .subSectionOne > p {
     font-size: 1.7rem;
-    max-width: 34rem;
+    max-width: 31rem;
     text-align: center;
     line-height: 1.2;
     margin: 0 auto 1.85rem;

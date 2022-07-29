@@ -32,7 +32,6 @@ main {
         background: url('../images/mainBig.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        // background-position: 100% 100%;
         background-position: center;
         width: 100%;
         height: 50%;
@@ -153,7 +152,6 @@ article {
     background: url('../images/firstProject.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    // background-position: 100% 100%;
     background-position: center;
 }
 
@@ -161,7 +159,6 @@ article {
     background: url('../images/secondProject.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    // background-position: 100% 100%;
     background-position: center;
 }
 
@@ -169,7 +166,6 @@ article {
     background: url('../images/thirdProject.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    // background-position: 100% 100%;
     background-position: center;
 }
 
@@ -177,7 +173,7 @@ article {
 
 .testimonials {
     background-color: lightgray;
-    height: fit-content;
+    height: auto;
     flex-direction: column;
     & .buttonSide {
         flex: 1 0 0;
@@ -394,9 +390,6 @@ article {
 
     .burgerIcon {
         z-index: 5;
-        // &.clicked {
-        //     transform: translateX(28px);
-        // }
     }
 
     p {
@@ -505,12 +498,22 @@ article {
     .project {
         height: 31rem;
         margin-bottom: 3rem;
+        & h4 {
+            &:hover span {
+                padding-left: 1rem;
+            }
+        }
         &.one > .photoSide {
             background-position: right;
         }
         &.two {
             flex-direction: row-reverse;
             padding-right: 5%;
+            & h4 {
+                &:hover span {
+                    padding-right: 1.25rem;
+                }
+            }
             & .textSide {
                 padding: 0% 5%;
                 align-items: flex-end;
@@ -649,11 +652,11 @@ article {
                 }
             }
             & > h3 {
-                font-size: 3.2rem;
+                font-size: 3rem;
             }
             & > p {
                 font-size: 1.7rem;
-                max-width: 34rem;
+                max-width: 31rem;
                 text-align: center;
                 line-height: 1.2;
                 margin: 0 auto 1.85rem;

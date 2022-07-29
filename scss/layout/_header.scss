@@ -115,11 +115,11 @@ header {
     right: 0;
     top: 0;
     width: 0rem;
-    height: 52rem;
+    height: 46rem;
     will-change: contents;
     transition: width 0.35s ease-in;
     &.showMenu {
-        width: 24rem;
+        width: 22rem;
         & li {
             transition: opacity 0.85s ease-in, color 0.35s ease;
             opacity: 1;
@@ -133,7 +133,10 @@ header {
         font-family: $superSpecialFont;
         display: none;
         opacity: 0;
-        &:hover {
+        &:nth-child(1) {
+            font-weight: bold;
+        }
+        &:not(:nth-child(1)):hover {
             color: $specialBlue;
         }
     }

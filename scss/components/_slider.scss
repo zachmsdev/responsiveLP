@@ -11,8 +11,7 @@ aside {
         gap: 1em;
         font-family: $superSpecialFont;
         & li {
-            // background: salmon;
-            font-family: 'Verdana';
+            font-family: $superSpecialFont;
             font-size: 1.5rem;
             color: gray;
             &:nth-child(4) {
@@ -23,24 +22,24 @@ aside {
 }
 
 aside .clientOne {
-    opacity: 0;
+    display: none;
     transition: opacity 0.5s ease;
 }
 
 aside .clientTwo {
     position: absolute;
-    opacity: 0;
+    display: none;
     transition: opacity 0.5s ease;
 }
 
 aside .clientThree {
     position: absolute;
-    opacity: 0;
+    display: none;
     transition: opacity 0.5s ease;
 }
 
 .clientThree.helloClients,
 .clientTwo.helloClients,
 .clientOne.helloClients {
-    opacity: 1;
+    display: flex;
 }

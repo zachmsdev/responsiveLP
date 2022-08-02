@@ -87,7 +87,6 @@ const testimonials = () => {
     const controls = [...document.querySelectorAll('.controls > button')];
     const transitionalDiv = document.querySelector('.transitionDiv');
     let clientIndex = 0;
-    let autoPlayIndex = 0;
     const clientElements = {
         quote: document.querySelector('blockquote p'),
         name: document.querySelector('.clientName'),

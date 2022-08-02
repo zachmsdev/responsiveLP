@@ -13,7 +13,7 @@ html {
 body {
   min-height: 100vh;
   padding: 2.5rem 0rem;
-  font-size: 16px;
+  font-size: 1.6rem;
   background-color: #E0E0E0;
 }
 
@@ -241,7 +241,6 @@ header .titleBlock > h2 span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.2em;
   z-index: 9;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
@@ -252,6 +251,7 @@ header .titleBlock > h2 span {
 .burgerIcon > div:nth-child(1) {
   height: 3px;
   width: 100%;
+  margin-bottom: 0.2em;
   border-radius: 1rem;
   background-color: black;
   top: 0.5rem;
@@ -264,6 +264,7 @@ header .titleBlock > h2 span {
 .burgerIcon > div:nth-child(2) {
   height: 3px;
   width: 100%;
+  margin-bottom: 0.2em;
   border-radius: 1rem;
   background-color: black;
   -webkit-transition: opacity 0.7s ease-out;
@@ -485,6 +486,8 @@ footer .topFooter .companySide div h2 > span {
 
 footer .topFooter .companySide div > p {
   font-size: calc(1rem + 1.4vw);
+  max-width: 35rem;
+  margin: 0 auto;
 }
 
 footer .topFooter .contactSide {
@@ -529,8 +532,6 @@ footer .topFooter .contactSide div ul {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
-  -webkit-transform: translateX(4px);
-          transform: translateX(4px);
 }
 
 footer .topFooter .contactSide div ul > li {
@@ -814,7 +815,6 @@ article .pSide {
 .testimonials {
   background-color: lightgray;
   height: auto;
-  min-height: 322px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -823,8 +823,9 @@ article .pSide {
 
 .testimonials .buttonSide {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 0%;
-          flex: 1 0 0%;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0px;
+  min-height: 119px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -855,6 +856,7 @@ article .pSide {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  font-family: 'Arial';
   background-color: transparent;
   outline: none;
   border: none;
@@ -863,12 +865,13 @@ article .pSide {
 
 .testimonials .buttonSide .controls > button:nth-child(2) {
   margin-left: 1rem;
+  font-family: 'Arial';
 }
 
 .testimonials .textSide {
   -webkit-box-flex: 1.5;
       -ms-flex: 1.5 0 0px;
-          flex: 1.5 0 0;
+          flex: 1.5 0 0px;
   font-family: "Arial";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -890,10 +893,8 @@ article .pSide {
 .testimonials .textSide blockquote {
   -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  -webkit-transform: perspective(400px);
-          transform: perspective(400px);
   position: relative;
+  text-align: center;
   background-color: #f6f6f6;
   padding: 6%;
   max-width: 306px;
@@ -1088,7 +1089,7 @@ article .pSide {
     font-size: calc(1.65rem + 1.5vw);
   }
   .discuss {
-    padding: 0rem 10.5vw;
+    padding: 0rem 12.5vw;
   }
   .project {
     height: 57rem;
@@ -1256,7 +1257,10 @@ article .pSide {
   .project h4:hover span {
     padding-left: 1rem;
   }
-  .project.one > .photoSide {
+  .project.one .textSide h2 {
+    text-align: left;
+  }
+  .project.one .photoSide {
     background-position: right;
   }
   .project.two {
@@ -1349,7 +1353,7 @@ article .pSide {
   }
   footer .topFooter .contactSide {
     font-size: 1.5rem;
-    gap: 1.4rem;
+    gap: 2.4rem;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -1509,7 +1513,7 @@ article .pSide {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    gap: 1.4rem;
+    gap: 2.4rem;
     font-size: 1.5rem;
   }
   footer .topFooter .contactSide div > p {

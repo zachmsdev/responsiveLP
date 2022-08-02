@@ -175,10 +175,10 @@ article {
 .testimonials {
     background-color: lightgray;
     height: auto; 
-    min-height: 322px;
-    flex-direction: column;     // this section is destroyed on Safari :) will fix tomorrow morning
+    flex-direction: column;     
     & .buttonSide {
-        flex: 1 0 0%;
+        flex: 1 0 0px;
+        min-height: 119px;  // min-height because safari bug
         @include bringCenter();
         flex-direction: column;
         font-family: $superSpecialFont;
@@ -193,18 +193,20 @@ article {
         & .controls {
             & > button {
                 appearance: none;
+                font-family: 'Arial';
                 background-color: transparent;
                 outline: none;
                 border: none;
                 font-size: 4rem;
                 &:nth-child(2) {
                     margin-left: 1rem;
+                    font-family: 'Arial';
                 }
             }
         }
     }
     & .textSide {
-        flex: 1.5 0 0;
+        flex: 1.5 0 0px;
         font-family: $superSpecialFont;
         @include bringCenter();
         flex-direction: column;
@@ -212,9 +214,8 @@ article {
         padding: 0% 7% 7% 7%;
         & blockquote {
             box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
-            text-align: center;
-            transform: perspective(400px);
             position: relative;
+            text-align: center;
             background-color: #f6f6f6;
             padding: 6%;
             max-width: 306px;
@@ -371,7 +372,7 @@ article {
     }
 
     .discuss {
-        padding: 0rem 10.5vw;
+        padding: 0rem 12.5vw;
     }
 
     .project {
@@ -530,8 +531,13 @@ article {
                 padding-left: 1rem;
             }
         }
-        &.one > .photoSide {
-            background-position: right;
+        &.one {
+            & .textSide h2 {
+                text-align: left;
+            }
+            & .photoSide {
+                background-position: right;
+            } 
         }
         &.two {
             flex-direction: row-reverse;
@@ -602,7 +608,7 @@ article {
             background: white;
             & .contactSide {
                 font-size: 1.5rem;
-                gap: 1.4rem;
+                gap: 2.4rem;
                 justify-content: flex-end;
             }
             & .companySide {
@@ -755,7 +761,7 @@ article {
             }
             & .contactSide {
                 justify-content: flex-end;
-                gap: 1.4rem;
+                gap: 2.4rem;
                 font-size: 1.5rem;
                 & div > p {
                     font-size: 1.5rem;

@@ -332,7 +332,7 @@ header .titleBlock > h2 span {
   padding-right: 4rem;
   cursor: pointer;
   margin-bottom: 2rem;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-family: "Arial";
   display: none;
   opacity: 0;
@@ -495,7 +495,7 @@ footer .topFooter .contactSide {
   text-align: center;
   font-family: "Arial";
   background-color: white;
-  font-size: calc(1rem + 1.7vw);
+  font-size: calc(1rem + 1.4vw);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,6 +529,8 @@ footer .topFooter .contactSide div ul {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
 }
 
 footer .topFooter .contactSide div ul > li {
@@ -624,6 +626,8 @@ main .sectionTwo {
   background: url("../images/mainBig.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-filter: hue-rotate(179deg);
+          filter: hue-rotate(179deg);
   background-position: center;
   width: 100%;
   height: 50%;
@@ -756,7 +760,7 @@ article .pSide {
 
 .project .textSide {
   background-color: white;
-  padding: 8%;
+  padding: 8% 10%;
   text-align: center;
   font-family: "Arial";
   -webkit-box-flex: 0.25;
@@ -810,6 +814,7 @@ article .pSide {
 .testimonials {
   background-color: lightgray;
   height: auto;
+  min-height: 322px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -818,8 +823,8 @@ article .pSide {
 
 .testimonials .buttonSide {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -883,11 +888,34 @@ article .pSide {
 }
 
 .testimonials .textSide blockquote {
-  font-size: 1.8rem;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  -webkit-transform: perspective(400px);
+          transform: perspective(400px);
+  position: relative;
   background-color: #f6f6f6;
-  padding: 4%;
+  padding: 6%;
   max-width: 306px;
+}
+
+.testimonials .textSide blockquote p {
+  font-size: 1.8rem;
+  font-family: "Arial";
+}
+
+.testimonials .textSide blockquote > .transitionDiv {
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background: #1d8cff;
+  bottom: 0;
+  left: 0;
+}
+
+.testimonials .textSide blockquote > .transitionDiv.divAnimation {
+  -webkit-animation: quoteAnimation 0.5s;
+          animation: quoteAnimation 0.5s;
 }
 
 .testimonials .textSide .userProfile {
@@ -915,7 +943,9 @@ article .pSide {
 
 .testimonials .textSide .userProfile div:nth-child(1) > .profileBall {
   height: 3rem;
-  background-color: black;
+  background: url("../images/client1.jpg");
+  background-size: cover;
+  background-position: center;
   width: 3.25rem;
   border-radius: 50%;
 }
@@ -999,6 +1029,24 @@ article .pSide {
   display: none;
 }
 
+@-webkit-keyframes quoteAnimation {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@keyframes quoteAnimation {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
 @media only screen and (min-width: 28.125em) {
   main {
     height: 63rem;
@@ -1016,12 +1064,7 @@ article .pSide {
     padding: 7% 12%;
   }
   .sectionTwo {
-    -webkit-filter: hue-rotate(179deg);
-            filter: hue-rotate(179deg);
     background-position: top;
-  }
-  aside ul li:nth-child(4) {
-    display: initial;
   }
   section .subSectionOne {
     padding: 6% 11% 7% 11%;
@@ -1060,7 +1103,7 @@ article .pSide {
     padding: 5% 4%;
   }
   footer .topFooter .contactSide {
-    font-size: calc(1rem + 1.4vw);
+    font-size: calc(1rem + 1.3vw);
   }
   footer .topFooter .companySide div > p {
     font-size: calc(1rem + 1.2vw);
@@ -1132,6 +1175,9 @@ article .pSide {
   }
   aside ul {
     gap: 1.5em;
+  }
+  aside ul li:nth-child(4) {
+    display: initial;
   }
   section {
     display: -webkit-box;
@@ -1446,7 +1492,7 @@ article .pSide {
     padding: 1.1rem 1.5rem;
   }
   .discuss > h2 {
-    max-width: 175px;
+    max-width: 17.5rem;
     font-size: 3rem;
   }
   footer .topFooter {
@@ -1483,6 +1529,7 @@ article .pSide {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    padding-right: 5.5%;
   }
   header nav > .burgerIcon {
     display: none;

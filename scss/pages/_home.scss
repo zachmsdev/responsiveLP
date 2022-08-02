@@ -32,6 +32,7 @@ main {
         background: url('../images/mainBig.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        filter: hue-rotate(179deg);
         background-position: center;
         width: 100%;
         height: 50%;
@@ -131,7 +132,7 @@ article {
     }
     & .textSide {
         background-color: white;
-        padding: 8%;
+        padding: 8% 10%;
         text-align: center;
         font-family: $superSpecialFont;
         flex: 0.25 0 auto;
@@ -173,10 +174,11 @@ article {
 
 .testimonials {
     background-color: lightgray;
-    height: auto;
-    flex-direction: column;
+    height: auto; 
+    min-height: 322px;
+    flex-direction: column;     // this section is destroyed on Safari :) will fix tomorrow morning
     & .buttonSide {
-        flex: 1 0 0;
+        flex: 1 0 0%;
         @include bringCenter();
         flex-direction: column;
         font-family: $superSpecialFont;
@@ -209,11 +211,28 @@ article {
         gap: 1rem;
         padding: 0% 7% 7% 7%;
         & blockquote {
-            font-size: 1.8rem;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
             text-align: center;
+            transform: perspective(400px);
+            position: relative;
             background-color: #f6f6f6;
-            padding: 4%;
+            padding: 6%;
             max-width: 306px;
+            & p {
+                font-size: 1.8rem;
+                font-family: $superSpecialFont;
+            }
+            & > .transitionDiv {
+                position: absolute;
+                width: 100%;
+                height: 0%;
+                background: #1d8cff;
+                bottom: 0;
+                left: 0;
+                &.divAnimation {
+                    animation: quoteAnimation 0.5s;
+                }
+            }
         }
         & .userProfile {
             width: 13rem;
@@ -224,7 +243,9 @@ article {
                 @include bringCenter();
                 & > .profileBall {
                     height: 3rem;
-                    background-color: black;
+                    background: url('../images/client1.jpg');
+                    background-size: cover;
+                    background-position: center;
                     width: 3.25rem;
                     border-radius: 50%;
                 }
@@ -283,6 +304,14 @@ article {
     display: none;
 }
 
+@keyframes quoteAnimation {
+    from {
+        height: 100%;
+    } to {
+        height: 0%
+    }
+}
+
 
 
 
@@ -312,12 +341,7 @@ article {
     }
 
     .sectionTwo {
-        filter: hue-rotate(179deg);
         background-position: top;
-    }
-
-    aside ul li:nth-child(4) {
-        display: initial;
     }
 
     section .subSectionOne {
@@ -363,7 +387,7 @@ article {
     }
 
     footer .topFooter .contactSide {
-        font-size: calc(1rem + 1.4vw);
+        font-size: calc(1rem + 1.3vw);
     }
 
     footer .topFooter .companySide div > p {
@@ -436,6 +460,9 @@ article {
 
     aside ul {
         gap: 1.5em;
+        & li:nth-child(4) {
+            display: initial;
+        }
     }
 
     section {
@@ -711,7 +738,7 @@ article {
             padding: 1.1rem 1.5rem;
         }
         & > h2 {
-            max-width: 175px;
+            max-width: 17.5rem;
             font-size: 3rem;
         }
     }
@@ -750,6 +777,7 @@ article {
         }
         & nav {
             justify-content: flex-end;
+            padding-right: 5.5%;
             & > .burgerIcon {
                 display: none;
             }

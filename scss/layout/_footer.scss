@@ -45,7 +45,7 @@ footer {
             text-align: center;
             font-family: $superSpecialFont;
             background-color: white;
-            font-size: calc(1rem + 1.7vw);
+            font-size: calc(1rem + 1.4vw);
             @include bringCenter();
             gap: 2rem;
             & ul li {
@@ -63,6 +63,7 @@ footer {
                 display: flex;
                 justify-content: center;
                 gap: 1rem;
+                transform: translateX(4px);
                 & > li {
                     width: 2.7rem;
                     height: 2.7rem;

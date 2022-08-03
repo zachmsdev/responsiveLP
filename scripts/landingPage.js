@@ -99,17 +99,17 @@ const testimonials = () => {
         {
             name: 'Jared Locks',
             location: 'Baltimore, MD',
-            photo: '../images/client1.jpg',
+            photo: 'images/client1.jpg',
             quote: "\"At Riorku they have the best team of interior designers, architects, engineers and manufactures to make every dream become a reality.\""
         }, {
             name: 'Savannah Smith',
             location: 'Miami, FL',
-            photo: '../images/client2.jpg',
+            photo: 'images/client2.jpg',
             quote: "\"Riorku's architects, engineers and manufactures helped to design my dream home and made it exactly how I dreamed that it should look!\""
         }, {
             name: 'Dennis Bates',
             location: 'Denver, CO',
-            photo: '../images/client3.jpg',
+            photo: 'images/client3.jpg',
             quote: "\"Wow, I can't believe how good the architects and designers are at Riorku. Now my home exactly matches with my own personal style!\""
         }
     ];

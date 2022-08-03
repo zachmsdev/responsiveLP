@@ -602,6 +602,7 @@ article {
 
     footer {
         height: 28rem;
+        position: relative;
         & .topFooter {
             flex-direction: row;
             padding: 0 7%;
@@ -610,6 +611,7 @@ article {
                 font-size: 1.5rem;
                 gap: 2.4rem;
                 justify-content: flex-end;
+                position: relative;
             }
             & .companySide {
                 display: flex;
@@ -620,6 +622,28 @@ article {
                     & > p {
                         padding-right: 20%;
                         font-size: 1.5rem;
+                    }
+                }
+                & #toTopIcon {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    border-radius: 50%;
+                    background: #bababa;
+                    background-image: url('../images/toTop.svg');
+                    background-size: 70%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: absolute;
+                    cursor: pointer;
+                    top: -5rem;
+                    left: -2.8rem;
+                    &::before {
+                        content: 'To Top';
+                        display: inline-block;
+                        font-weight: 700;
+                        font-family: $superSpecialFont;
+                        min-width: 6rem;
+                        transform: rotate(270deg) translate(-50px, -18px);
                     }
                 }
             }

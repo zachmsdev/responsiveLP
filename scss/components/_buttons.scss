@@ -72,8 +72,38 @@ button {
     }
 }
 
+// Poolstick button animations
+
+#toTopIcon.poolStick {
+    animation: poolstick 1.4s;
+}
+
+.siteWrapper.poolSticked {
+    animation: poolSticked 0.5s;
+}
+
 @keyframes forwardAnimation {
     to {
         transform: scale(1.15);
+    }
+}
+
+@keyframes poolstick {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    } 80% {
+        transform: translate3d(0px, 105px, 0px);
+    } 100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+@keyframes poolSticked {
+    0% {
+        transform: translateY(0px);
+    } 50% {
+        transform: translateY(-10px);
+    } 100% {
+        transform: translateY(0px);
     }
 }

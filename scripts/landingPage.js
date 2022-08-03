@@ -159,11 +159,44 @@ const testimonials = () => {
 
 }
 
+const toTopButton = () => {
+
+    // Variables
+    const upButton = document.querySelector('#toTopIcon')
+    const siteWrapper = document.querySelector('.siteWrapper');
+
+    // Functions
+    const flyUp = () => {
+        upButton.classList.add('poolStick');
+        upButton.onanimationend = () => {
+            upButton.classList.remove('poolStick');
+            window.scrollTo(0, 0);
+            // Add bounce effect to the site wrapper
+            bounce();
+        }
+
+        const bounce = () => {
+            setTimeout(() => {
+                siteWrapper.classList.add('poolSticked');
+                siteWrapper.onanimationend = () => {
+                    siteWrapper.classList.remove('poolSticked');
+                }
+            }, 30);
+        }
+    }
+
+    // Events
+    upButton.addEventListener('click', flyUp)
+
+}
+
 
 const riorku = () => {
     mobileMenu();
     typeWriter();
     testimonials();
+    toTopButton();
 }
 
 riorku();
+

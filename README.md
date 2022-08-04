@@ -1,6 +1,5 @@
 # Interior Design Landing Page :vampire:
 <img src='https://user-images.githubusercontent.com/105673639/182765994-7910a1a3-c62c-4d1e-a21e-5920dc124030.gif' width='600' align='left'><br /> <br />
-![landingpagegif](https://user-images.githubusercontent.com/105673639/182765994-7910a1a3-c62c-4d1e-a21e-5920dc124030.gif)
 <h3 align='center'>Responsive on all devices.</h3>
 <br clear="left"/>
 <h2>Practiced Skills</h2>
@@ -16,7 +15,7 @@
 <ul>
   <li>How much I really undervalued the importance of image<br/>  compression,
   I went from a 67 performance to this after:</li><br/>
-  <img src='https://github.com/zachmsdev/gifs/blob/main/chromeTest.PNG' width='750' align='left' display='block'>
+  <img src='https://user-images.githubusercontent.com/105673639/182766577-8e679923-d408-4490-a9c7-7b926c180c7f.PNG' width='750' align='left' display='block'>
   <br clear="left"/><br/>
   <li>Preload links for images in the head of HTML file for another performance boost.</li>
   <br/>

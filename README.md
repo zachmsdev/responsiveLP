@@ -1,6 +1,6 @@
 # Interior Design Landing Page :vampire:
-![](https://github.com/zachmsdev/gifs/blob/main/readme.gif)
-<img src='https://github.com/zachmsdev/gifs/blob/main/readme.gif' width='600' align='left'><br /> <br />
+<img src='https://s4.gifyu.com/images/readme.gif' width='600' align='left'><br /> <br />
+![landingpagegif](https://user-images.githubusercontent.com/105673639/182765994-7910a1a3-c62c-4d1e-a21e-5920dc124030.gif)
 <h3 align='center'>Responsive on all devices.</h3>
 <br clear="left"/>
 <h2>Practiced Skills</h2>

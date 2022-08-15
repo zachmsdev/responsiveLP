@@ -23,7 +23,7 @@
   <br/>
   <li>I might be nesting my SCSS too much, looking into that.</li>
   <br/>
-  <li>Lastly, how good the CSS clamp function is! I've been<br/>
+  <li>How good the CSS clamp function is! I've been<br/>
   liking calc() for typography and definitely will use clamp<br/>
   now for some extra help.</li><br/>
   <li>Thanks to @FazaDzikrulloh on Dribble for making the design. Link to design: <a href='https://dribbble.com/shots/18669052-Riotku-Interior-Design-Landing-Page'>Riorku PSD</a></li>
